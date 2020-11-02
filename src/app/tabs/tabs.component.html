@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs mb-1">
+    <ng-template ngFor let-tab [ngForOf]="tabs">
+        <li class="nav-item" role='presentation'>
+            <a tabindex="0" class="nav-link smd-font-bold"  (click)="selectTab(tab)" [ngClass]="{'active': tab.active}"
+                data-toggle="tab" role="tab" [attr.aria-selected]="tab.active" [attr.aria-expanded]="tab.active"  [ngStyle]="tab.labelStyle" (keydown.enter)="selectTab(tab)"
+                id="{{tab.title}}"   (keydown.ArrowLeft)="onKeyLeft($event,tab)" >{{tab.title}}</a>
+        </li>
+    </ng-template>
+  </ul>
+  <ng-content></ng-content>

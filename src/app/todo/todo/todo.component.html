@@ -1,0 +1,17 @@
+<div class="container">
+    <H1>todo works!</H1>
+    <tabs>
+        <tab [tabTitle]="'Todo List'" [tabValue]="'purchases'">
+            <app-table>
+                <ng-template #btnRef let-person>
+                    <td><button class="btn btn-danger">{{ person.fname + ' ' + person.lname }}</button></td>
+                </ng-template>
+            </app-table>
+        </tab>
+        <app-todo-sibling></app-todo-sibling>
+        <tab [tabTitle]="'Others'" [tabValue]="'others'">
+            <h2>Coming soon ......</h2>
+        </tab>
+    </tabs>
+    
+</div>
